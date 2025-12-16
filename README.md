@@ -683,15 +683,23 @@ Show git clone then make bootstrap script that can deploy base platform to a dev
 
 Secrets in Git — avoid by using SealedSecrets/Vault integration or SOPS.
 
-Extra Tip : Enable OIDC auth for more security 
-if using terraform before creating the prod cluster use terratest tool to check the cluster creation and all so that it will show any errors/issues in the terraform modules and you can double check then apply and destroy
-use helm repos for minimizing the cluster creation time and to deploy tools for observe or networking 
-if you know or dnt know Nvidia gpu servers or nodes need gpu drivers/plugins  to function properly  and also every nvdia gpu server needs compatible plugin or driver keep an eye on that (go through the aws documentation for gpu related queries ) and i have only worked with NVDIA GPUs 
-and in tools you need to explore the things you need before dropping anything into the  cluster not in the middle of troubleshooting (thinking of could have used another tool  )
+Extra Tip : 
+1.Enable OIDC auth for more security 
+
+2.if using terraform before creating the prod cluster use terratest tool to check the cluster creation and all so that it will show any errors/issues in the terraform modules and you can double check then apply and destroy
+
+3.use helm repos for minimizing the cluster creation time and to deploy tools for observe or networking 
+
+4.if you know or dnt know Nvidia gpu servers or nodes need gpu drivers/plugins  to function properly  and also every nvdia gpu server needs compatible plugin or driver keep an eye on that (go through the aws documentation for gpu related queries ) and i have only worked with NVDIA GPUs 
+
+5.and in tools you need to explore the things you need before dropping anything into the  cluster not in the middle of troubleshooting (thinking of could have used another tool  )
 like using fluentbit or fluentd  = fluentbit is lightweight and may fulfill your observability needs  whereas fluentd is little heavy comes with more features . 
 and also likerd or istio ..istio is better for complex rollouts linkerd is for simple usecase .
 nginx ingress controller or AWS ingress controller like these options you need to decide which suits best for your needs .
 
-Use proper documentation ahead of creating the cluster . multiAZ and high availability needs 
-and use gitignore  to avoid secret exposure if you are using any  repository house 
- cloud managed cluster comes with cost and not cheap at all so you have to have a budget in mind if possible .aws managed is good when you have budget and when you have constraints you need to do little research on how to optimize the cost without loosing the cluster quality  like storage PVs and observability stacks 
+
+6.Use proper documentation ahead of creating the cluster . multiAZ and high availability needs 
+
+7.and use gitignore  to avoid secret exposure if you are using any  repository house 
+
+8.cloud managed cluster comes with cost and not cheap at all so you have to have a budget in mind if possible .aws managed is good when you have budget and when you have constraints you need to do little research on how to optimize the cost without loosing the cluster quality  like storage PVs and observability stacks 
