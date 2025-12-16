@@ -703,3 +703,7 @@ nginx ingress controller or AWS ingress controller like these options you need t
 7.and use gitignore  to avoid secret exposure if you are using any  repository house 
 
 8.cloud managed cluster comes with cost and not cheap at all so you have to have a budget in mind if possible .aws managed is good when you have budget and when you have constraints you need to do little research on how to optimize the cost without loosing the cluster quality  like storage PVs and observability stacks 
+
+9.k8 provides another configuration object for Encryption  kind: EncryptionConfiguration have a look at it if you dnt know 
+
+I have provided all the info i know best of there may be many things i may have missed . 
