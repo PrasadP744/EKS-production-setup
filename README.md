@@ -688,7 +688,9 @@ if using terraform before creating the prod cluster use terratest tool to check 
 use helm repos for minimizing the cluster creation time and to deploy tools for observe or networking 
 if you know or dnt know Nvidia gpu servers or nodes need gpu drivers/plugins  to function properly  and also every nvdia gpu server needs compatible plugin or driver keep an eye on that (go through the aws documentation for gpu related queries ) and i have only worked with NVDIA GPUs 
 and in tools you need to explore the things you need before dropping anything into the  cluster not in the middle of troubleshooting (thinking of could have used another tool  )
-like using fluentbit or fluentd  = fluentbit is lightweight and may fulfill your observability needs  whereas fluentd is little heavy comes with more features .
+like using fluentbit or fluentd  = fluentbit is lightweight and may fulfill your observability needs  whereas fluentd is little heavy comes with more features . 
+and also likerd or istio ..istio is better for complex rollouts linkerd is for simple usecase .
+nginx ingress controller or AWS ingress controller like these options you need to decide which suits best for your needs .
 
 Use proper documentation ahead of creating the cluster . multiAZ and high availability needs 
 and use gitignore  to avoid secret exposure if you are using any  repository house 
